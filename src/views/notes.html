@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notifier</title>
+    <link rel="stylesheet" href="../../public/styles/notes.css" />
+    <script src="../js/notes.js" async></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="navList">
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="../src/index.html">Todo</a></li>
+        <li><a href="./notes.html">Notes</a></li>
+      </ul>
+    </nav>
+
+    <div class="formBox">
+      <form action="POST" class="form" id="form">
+        <label for="Title">Title</label>
+        <input type="text" id="title" placeholder="Title" required />
+        <label for="Content">Content</label>
+        <textarea
+          name="content"
+          id="content"
+          cols="25"
+          rows="5"
+          placeholder="Content:"
+          required
+        ></textarea>
+        <button type="submit" id="noteBtn">Note it</button>
+      </form>
+    </div>
+
+    <section class="imp">
+      <div class="contentBox"></div>
+    </section>
+
+    <section class="weekly">
+      <div class="card">
+        <h2 class="title">Title</h2>
+        <span class="time">12:12</span>
+        <span class="date">12:12</span>
+        <p class="content">Content</p>
+        <form action="POST" class="cardOptions">
+          <button type="submit" class="btn">Delete</button>
+          <button type="submit" class="btn">Copy</button>
+          <button type="submit" class="btn">Update</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
