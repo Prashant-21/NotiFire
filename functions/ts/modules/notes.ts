@@ -5,7 +5,10 @@ const notesForm = document.getElementById("form") as HTMLFormElement;
 const noteTitle = document.getElementById("title") as HTMLInputElement;
 const noteContent = document.getElementById("content") as HTMLTextAreaElement;
 const noteBtn = document.getElementById('noteBtn') as HTMLButtonElement
-  
+
+// Firestore Database
+const db= firebase.firestore();
+
   const dateRef = new Date;
 class Note{
   constructor(){
@@ -38,7 +41,7 @@ function createNote(){
 
 
 type typeNote = {
-  title: string,
-  content: string,
-  date: Date//new Date() => Tue Feb 05 2019 12:05:22 GMT+0530 (IST)  
+  title: string;
+  content: string;
+  date: Date;//new Date() => Tue Feb 05 2019 12:05:22 GMT+0530 (IST)  
 }

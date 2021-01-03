@@ -1,11 +1,106 @@
-*,
-html {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* background: black; */
+  color: white;
 }
+html {
+  background: black;
+}
+/* Nav Bar  */
+.navbar {
+  width: fit-content;
+  height: fit-content;
+  top: -1;
+  position: sticky;
+  margin: 0 auto;
+  /* background: linear-gradient(
+    rgba(173, 51, 51, 1) 30%,
+    rgba(46, 90, 90, 1) 50%,
+    rgba(21, 14, 83, 1) 82%
+  ); */
+  background: linear-gradient(
+    rgb(94 94 94) 30%,
+    rgb(102 168 153 / 0%) 50%,
+    rgb(96 92 130) 82%
+  );
+  border-radius: 150px;
+}
+.navbar:hover {
+  box-shadow: 0 0 36px rgba(55, 0, 255, 0.8);
+}
+.navList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3px;
+}
+.navList li {
+  margin: auto 18px;
+  padding: 4px 5px;
+  text-decoration: none;
+  list-style: none;
+}
+.navList li:hover {
+  font-weight: bolder;
+  font-size: large;
+  color: yellow;
+}
+.navList li a {
+  text-decoration: none;
+  color: white;
+  font-weight: unset;
+  font-size: larger;
+}
+
+/* Welcome Section  */
 section#welcome {
   height: 100vh;
   background: teal;
-  display: none;
+  /* display: none; */
+}
+
+/* Form Styles */
+form.form {
+  background: teal;
+  width: 70%;
+  margin: 12px auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  box-shadow: 0 0 36px rgba(55, 0, 255, 0.8);
+}
+form.form input,
+form.form textarea {
+  width: 90%;
+  background-color: rgb(13, 34, 36);
+  font-weight: bold;
+  padding: 5px;
+  margin: 12px auto;
+  border-radius: 12px;
+}
+form.form button {
+  background-color: rgb(11, 19, 18);
+  width: 30%;
+  display: inline-block;
+  margin: 12px auto;
+  padding: 5px;
+  border-radius: 12px;
+}
+
+/*  About Dev Section-  */
+.dev {
+  width: 80%;
+  margin: 12px auto;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer */
+foooter p {
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-weight: bolder;
 }

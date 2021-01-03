@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Notes-To-Do
+    link(href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous")
+    link(rel="stylesheet" href="../../public/styles/todos.css")
+    script(src="../js/todos.js" type="module" async="")
+    // <script src="./script.js" async></script>
+  body
+    nav.navbar
+      ul.navList
+        li
+          a(href="./index.html") Todo
+        li
+          a(href="../public/home.html") Home
+        li
+          a(href="../public/notes.html") Notes
+    header Notes-To-Do
+    form(action="/note")
+      input#inputNotes.todo-input(type="text" name="inputNotes")
+      button.todo-button(type="submit")
+        i.fas.fa-plus-square
+      .select
+        select.filter-todo.effect5(name="todos")
+          option(value="all") All
+          option(value="completed") Completed
+          option(value="uncompleted") Uncompleted
+    .todo-container
+      ul.todo-list

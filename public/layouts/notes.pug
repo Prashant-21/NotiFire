@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Notifier
+    link(rel="stylesheet" href="../../public/styles/notes.css")
+    script(src="../js/notes.js" async="")
+  body
+    nav.navbar
+      ul.navList
+        li
+          a(href="../src/index.html") Todo
+        li
+          a(href="./home.html") Home
+        li
+          a(href="./notes.html") Notes
+    .formBox
+      form#form.form(action="POST")
+        label(for="Title") Title
+        input#title(type="text" placeholder="Title" required="")
+        label(for="Content") Content
+        textarea#content(name="content" cols="25" rows="5" placeholder="Content:" required="")
+        button#noteBtn(type="submit") Note it
+    section.imp
+      .contentBox
+    section.weekly
+      .card
+        h2.title Title
+        span.time 12:12
+        span.date 12:12
+        p.content Content
+        form.cardOptions(action="POST")
+          button.btn(type="submit") Delete
+          button.btn(type="submit") Copy
+          button.btn(type="submit") Update

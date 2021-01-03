@@ -1,0 +1,44 @@
+
+  includes includes/nav
+
+  form.form(action="POST")
+    input#email(type="email" name="email" placeholder="Email :" required="")
+    input#pass(type="password" name="pass" placeholder="Password :" required="")
+    button(type="submit") Log In
+    button(type="submit") Sign Up
+  section#welcome
+    h1 Welcome to NotiFire
+    form(action="POST")
+      button(type="submit") Log Out
+  section#contact
+    .contactInfo
+      .dev
+        span Developed by Prashant Amoli
+        span
+          | Icon
+          a(href="mailto:prashantamoli@outlook.com") Email
+        span
+          a(href="link:https://www.linkedin.com/in/prashantamoli/")
+            | LinkedIn
+      form.form(action="post" method="post")
+        input#name(type="text" name="name" placeholder="Full Name :" required="")
+        input#email(type="email" name="email" placeholder="Email :" required="")
+        textarea#feedback(name="feedback" cols="30" rows="4" placeholder="Message :" required="")
+          | Subject :
+        button(type="submit") Send
+  footer
+    h3 Made with &#9829, JS/TS, & Firebase🔥
+    p
+      | © 2020
+      a(href="http://linkedin.com/in/prashantamoli/") Prashant Amoli
+  //- // The core Firebase JS SDK is always required and must be listed first
+  //- script(src="/__/firebase/8.2.1/firebase-app.js")
+  //- //
+  //-   TODO: Add SDKs for Firebase products that you want to use
+  //-   https://firebase.google.com/docs/web/setup#available-libraries
+  //- script(defer="" src="/__/firebase/8.2.1/firebase-analytics.js")
+  //- // Initialize Firebase
+  //- script(src="/__/firebase/init.js")
+  //- // Add Firebase products that you want to use
+  //- script(src="/__/firebase/8.2.1/firebase-auth.js")
+  //- script(src="/__/firebase/8.2.1/firebase-firestore.js")
